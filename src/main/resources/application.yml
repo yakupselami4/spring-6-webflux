@@ -1,0 +1,23 @@
+spring-6-weblux:
+  database:
+    host: 127.0.0.1
+    port: 5432
+    database: folksdevdb
+    schema: public
+    username: postgres
+    password: 1234
+    pool:
+      size:
+        initial: 3
+        max: 10
+
+  spring:
+    flyway:
+      enabled: true
+      url: jdbc:postgresql://127.0.0.1:5432/folksdevdb
+      user: postgres
+      password: 1234
+      baseline-version: 0
+
+  server:
+    port: 8081
