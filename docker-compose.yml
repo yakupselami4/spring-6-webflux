@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  folksdev-webflux-db:
+    image: postgres
+    container_name: folksdev-db
+    ports:
+      - 5432
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=folksdevdbdoc

@@ -2,7 +2,7 @@ spring-6-weblux:
   database:
     host: 127.0.0.1
     port: 5432
-    database: folksdevdb
+    name: folksdevdb
     schema: public
     username: postgres
     password: 1234

@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.flyway.FlywayProperties;
 import io.r2dbc.pool.ConnectionPool;
 import org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.data.r2dbc.convert.R2dbcCustomConversions;
 import org.springframework.r2dbc.connection.R2dbcTransactionManager;
@@ -35,11 +35,8 @@ public class DatabaseConfig extends AbstractR2dbcConfiguration {
     @Value("${spring-6-weblux.database.port}")
     private int port;
 
-    @Value("${spring-6-weblux.database.database}")
-    private String database;
-
     @Value("${spring-6-weblux.database.name}")
-    private String name;
+    private String database;
 
     @Value("${spring-6-weblux.database.schema}")
     private String schema;
@@ -50,10 +47,10 @@ public class DatabaseConfig extends AbstractR2dbcConfiguration {
     @Value("${spring-6-weblux.database.password}")
     private String password;
 
-    @Value("${spring-6-weblux.pool.size.initial}")
+    @Value("${spring-6-weblux.database.pool.size.initial}")
     private int initialPoolSize;
 
-    @Value("${spring-6-weblux.pool.size.max}")
+    @Value("${spring-6-weblux.database.pool.size.max}")
     private int maxPoolSize;
 
     @Override
